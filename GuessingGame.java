@@ -67,7 +67,7 @@ public class GuessingGame implements ActionListener {
   }
 
   public void actionPerformed(ActionEvent ae) { 
-    if(ae.getActionCommand().equals("Guess")) { 
+    if (ae.getActionCommand().equals("Guess")){
       int guess = Integer.parseInt(field.getText());
       lastGuessLabel.setText("Last guess was: " + guess); 
       if(guess < random) {
@@ -79,16 +79,15 @@ public class GuessingGame implements ActionListener {
       else if(guess == random){
         highLowLabel.setText("You got it!");
       }
-    }else if(ae.getActionCommand().equals("Play Again")){
+    }
+    else if(ae.getActionCommand().equals("Play Again")){
       random = r.nextInt(100) + 1;
-
-      enterGuessLabel.setText("Enter your guess: "); 
       highLowLabel.setText("");
       lastGuessLabel.setText("");
       field.setText("");
-    }else if(ae.getActionCommand().equals("")){
-      highLowLabel.setText("You pressed Enter. Please press the Guess Button.");
+    }
+    else{
+      highLowLabel.setText("You pressed Enter. Please press the Guess Button");
     }
   }
-
 }
