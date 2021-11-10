@@ -72,10 +72,9 @@ public class GuessingGame implements ActionListener {
       String guess = enterGuessLabel.getText();
       int guess1 = 0;
       if(guess != ""){
-        guess1 = Integer.parseInt(enterGuessLabel.getText());
+        guess1 = Integer.parseInt(guess);
       }
       //Integer.parseInt(enterGuessLabel.getText());
-      else {
       if(guess1 < random){
         highLowLabel.setText("Too low!");
       }else if(guess1 > random){
@@ -92,7 +91,6 @@ public class GuessingGame implements ActionListener {
       field.setText("");
     }else if(ae.getActionCommand().equals("")){
       highLowLabel.setText("You pressed Enter. Please press the Guess Button.");
-    }
     }
   }
 
